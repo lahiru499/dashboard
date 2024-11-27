@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <center>
+    <div style="background-color: brown;">
+      <h1 style="font-size: xxx-large; color: beige;">Personal Budget Tracker</h1>
+    </div>
+  </center>
+  
+  <div class="dashboard-container">
+   
+    <div class="chart-container">
+      <center><h2>Expense Categories</h2></center>
+      <canvas id="PieChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <center><h2>Monthly Spending</h2></center>
+      <canvas id="LineChart"></canvas>
+    </div>
+
+    
+    <div class="savings goals">
+      <h2>Savings Goals</h2>
+      <div class="goal">
+        <h4>Emergency Fund</h4>
+        <progress id="emergencyFundProgress" value="50" max="100"></progress>
+        <span id="emergencyFundLabel">50% Completed</span>
+      </div>
+      <div class="goal">
+        <h4>Vacation Fund</h4>
+        <progress id="vacationFundProgress" value="30" max="100"></progress>
+        <span id="vacationFundLabel">30% Completed</span>
+      </div>
+    </div>
+
+    
+    <div class="recent-transactions">
+      <h2>Recent Transactions</h2>
+      <ul id="recentTransactionList">
+        <li>Groceries-100</li>
+        <li>bank-40000</li>
+        <li>phone-35000</li>
+        <li>transport-300</li>
+      
+      </ul>
+    </div>
+
+   
+    <div class="table-container">
+      <h3>Transaction History</h3>
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024-11-01</td>
+                <td>Groceries</td>
+                <td>100</td>
+                <td>expense</td>
+            </tr>
+
+            <tr>
+                <td>2024-11-05</td>
+                <td>Salary</td>
+                <td>50000</td>
+                <td>income</td>
+            </tr>
+
+            <tr>
+                <td>2024-11-10</td>
+                <td>Utility Bill</td>
+                <td>2000</td>
+                <td>expense</td>
+            </tr>
+
+            <tr>
+                <td>2024-11-15</td>
+                <td>Utility Bill</td>
+                <td>2700</td>
+                <td>expense</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
